@@ -39,7 +39,10 @@ const rgbValues = decimalToRGB(nums);
 //Logs the hexadecimal and rgb values
 console.log(`${input} : (${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`);
 
+//Calls function to invert the rgb values
 const invertedRGB = invertRGB(rgbValues);
+
+//Logs the inverted rgb values
 console.log(`Inverted: (${invertedRGB[0]}, ${invertedRGB[1]}, ${invertedRGB[2]})`);
 
 

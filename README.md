@@ -6,6 +6,7 @@ Takes a six digit hexadecimal value and converts it to it's equivalent RGB value
 
 ## Features
 + Takes a hexadecimal color code and converts it to RGB.
++ Provides the inverted rgb colour.
 
 ## Usage
 Run the `main.js` file in a command line using `node main.js`. Require **node.js** installation.
@@ -14,7 +15,6 @@ Run the `main.js` file in a command line using `node main.js`. Require **node.js
 *In Progress*.
 
 ## Future Improvements
-+ Provides the inverted rgb colour.
 + Convert to grayscale.
 + Create colour object / factory.
 + Convert from rgb to hexadecimal.
