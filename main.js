@@ -22,9 +22,19 @@ const decimalToRGB = (nums) => {
     return rgbValues;
 };
 
+//Inverts rgb values by subtracting them from the maximum rgb values
 const invertRGB = (rgbValues) => {
     const invertedRGB = [...rgbValues];
     return invertedRGB.map(value => 255 - value);
+};
+
+//Sums two values
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+//Calculates and returns the average of the rgb values
+const averageGray = (rgbValues) => {
+    const average = rgbValues.reduce(reducer) / 3;
+    return rgbValues.map(value => value = average);
 };
 
 //Formats the hexdecimal value for conversion
@@ -39,10 +49,14 @@ const rgbValues = decimalToRGB(nums);
 //Logs the hexadecimal and rgb values
 console.log(`${input} : (${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`);
 
-//Calls function to invert the rgb values
+//Calls the function to invert the rgb values
 const invertedRGB = invertRGB(rgbValues);
 
 //Logs the inverted rgb values
 console.log(`Inverted: (${invertedRGB[0]}, ${invertedRGB[1]}, ${invertedRGB[2]})`);
 
+//Calls the function to get the average rgb values
+const averageRGB = averageGray(rgbValues);
 
+//Logs the average rgb values
+console.log(`Average Grayscale: (${averageRGB[0]}, ${averageRGB[1]}, ${averageRGB[2]})`);
