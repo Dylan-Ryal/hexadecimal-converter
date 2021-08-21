@@ -22,6 +22,11 @@ const decimalToRGB = (nums) => {
     return rgbValues;
 };
 
+const invertRGB = (rgbValues) => {
+    const invertedRGB = [...rgbValues];
+    return invertedRGB.map(value => 255 - value);
+};
+
 //Formats the hexdecimal value for conversion
 const input = '#A458E1';
 const chars = input.split('');
@@ -33,4 +38,8 @@ const rgbValues = decimalToRGB(nums);
 
 //Logs the hexadecimal and rgb values
 console.log(`${input} : (${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]})`);
+
+const invertedRGB = invertRGB(rgbValues);
+console.log(`Inverted: (${invertedRGB[0]}, ${invertedRGB[1]}, ${invertedRGB[2]})`);
+
 
