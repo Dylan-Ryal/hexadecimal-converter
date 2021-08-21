@@ -37,6 +37,14 @@ const averageGray = (rgbValues) => {
     return rgbValues.map(value => value = average);
 };
 
+//Calculate the threshold value and returns black or white rgb values depending on the average rgb values
+const thresholdBW = (averageRGB, thresholdPercent) => {
+    const threshold = Math.floor((thresholdPercent / 100) * 255);
+    const color = averageRGB[0] >= threshold ? 255 : 0;
+    const bwRGB = [...averageRGB];
+    return bwRGB.map(value => value = color);
+}
+
 //Formats the hexdecimal value for conversion
 const input = '#A458E1';
 const chars = input.split('');
@@ -60,3 +68,10 @@ const averageRGB = averageGray(rgbValues);
 
 //Logs the average rgb values
 console.log(`Average Grayscale: (${averageRGB[0]}, ${averageRGB[1]}, ${averageRGB[2]})`);
+
+//Calls the function to determine the Black / White value
+const thresholdPercent = 60;
+const bwRGB = thresholdBW(averageRGB, thresholdPercent);
+
+//Logs the black / white value
+console.log(`Black / White Convertion: (${bwRGB[0]}, ${bwRGB[1]}, ${bwRGB[2]})`);
