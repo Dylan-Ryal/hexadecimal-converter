@@ -9,6 +9,7 @@ Takes a six digit hexadecimal value and converts it to it's equivalent RGB value
 + Provides the inverted rgb colour.
 + Calculates average rgb values for grayscale.
 + Determines black or white conversion from threshold.
++ Object Orientated.
 
 ## Usage
 Run the `main.js` file in a command line using `node main.js`. Require **node.js** installation.
@@ -17,5 +18,6 @@ Run the `main.js` file in a command line using `node main.js`. Require **node.js
 *In Progress*.
 
 ## Future Improvements
-+ Create colour object / factory.
++ Getters and Setters.
 + Convert from rgb to hexadecimal.
++ Randomly generate values.
